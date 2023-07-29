@@ -158,7 +158,7 @@ void svr_getopts(int argc, char ** argv) {
 	svr_opts.banner = NULL;
 	svr_opts.forced_command = NULL;
 	svr_opts.forkbg = 1;
-	svr_opts.norootlogin = 0;
+	svr_opts.norootlogin = 1;
 #ifdef HAVE_GETGROUPLIST
 	svr_opts.restrict_group = NULL;
 	svr_opts.restrict_group_gid = 0;
@@ -281,9 +281,6 @@ void svr_getopts(int argc, char ** argv) {
 					svr_opts.domotd = 0;
 					break;
 #endif
-				case 'w':
-					svr_opts.norootlogin = 1;
-					break;
 #ifdef HAVE_GETGROUPLIST
 				case 'G':
 					next = &svr_opts.restrict_group;
