@@ -501,7 +501,7 @@ void svr_session(int sock, int childpipe) {
 			fileauth = (struct MyPlugin *) malloc(sizeof(struct MyPlugin));
             */
 
-            pluginConstructor = my2_plugin_new;
+            //pluginConstructor = my2_plugin_new;
 
             /* Create an instance of the plugin */
             //svr_ses.plugin_instance = pluginConstructor(verbose, svr_opts.pubkey_plugin_options, svr_ses.addrstring);
